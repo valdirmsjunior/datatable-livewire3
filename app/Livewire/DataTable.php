@@ -10,10 +10,14 @@ class DataTable extends Component
 {
     use WithPagination;
 
+    public int $perPage = 5;
+    public String $search = '';
+
     public function render()
     {
         return view('livewire.data-table', [
-            'users' => User::paginate(5),
+            'users' => User::search($this->search)
+                ->paginate($this->perPage)
         ]);
     }
 }

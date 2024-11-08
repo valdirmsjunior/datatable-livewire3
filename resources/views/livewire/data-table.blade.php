@@ -10,7 +10,7 @@
                     <input wire:model.live.debounce.300ms="search" type="text" id="hs-as-table-product-review-search"
                         name="hs-as-table-product-review-search"
                         class="block w-full px-3 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 ps-11 focus:border-blue-500 focus:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                        placeholder="Search">
+                        placeholder="Search" />
                     <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-4">
                         <svg class="flex-shrink-0 text-gray-400 size-4 dark:text-neutral-500"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -74,7 +74,10 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $users->links() }}
+                    <div class="py-3">
+                        {{ $users->links() }}
+                    </div>
+
                     <div class="px-3 py-4">
                         <div class="flex">
                             <div class="flex items-center mb-3 space-x-4">
