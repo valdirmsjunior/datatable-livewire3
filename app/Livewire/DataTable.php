@@ -33,4 +33,15 @@ class DataTable extends Component
                 ->paginate($this->perPage)
         ]);
     }
+
+    public function delete($id)
+    {
+        try {
+            User::where('id', $id)->delete();
+            return $this->redirect('/', navigate:true);
+        } catch (\Exception $ex) {
+            $ex;
+        }
+
+    }
 }

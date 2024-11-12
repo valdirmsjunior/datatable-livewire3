@@ -87,8 +87,9 @@
                                         {{ $user->created_at->format('d-m-Y') }}
                                     </td>
                                     <td class="px-6 py-4 text-sm font-medium whitespace-nowrap text-end">
-                                        <button type="button"
-                                            class="inline-flex items-center text-sm font-semibold text-blue-600 border border-transparent rounded-lg gap-x-2 hover:text-blue-800 disabled:pointer-events-none disabled:opacity-50 dark:text-blue-500 dark:hover:text-blue-400">
+                                        <button type="button" wire:click="delete({{ $user->id }})"
+                                            wire:confirm="Are you sure you want to delete this?"
+                                            class="inline-flex items-center text-sm font-semibold text-blue-600 border border-transparent rounded-lg btn-danger btn-sm gap-x-2 hover:text-blue-800 disabled:pointer-events-none disabled:opacity-50 dark:text-blue-500 dark:hover:text-blue-400">
                                             Delete
                                         </button>
                                     </td>
